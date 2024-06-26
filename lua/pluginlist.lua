@@ -74,4 +74,8 @@ return {
 			signs = false
 		}
 	},
+
+	-- git signs + blame stuff
+	"lewis6991/gitsigns.nvim",
+
 }
