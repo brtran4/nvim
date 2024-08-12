@@ -51,6 +51,31 @@ return {
 	-- make nvim a global var in the config files
 	"folke/neodev.nvim",
 
+	{
+		"folke/twilight.nvim",
+		opts = {
+			expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
+				"function",
+				"method",
+				"table",
+				"if_statement",
+			},
+		},
+	},
+
+	-- nvim-tree
+	{
+	  "nvim-tree/nvim-tree.lua",
+	  version = "*",
+	  lazy = false,
+	  dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	  },
+	  config = function()
+		require("nvim-tree").setup {}
+	  end,
+	},
+
 	-- telescope
 	{
 		"nvim-telescope/telescope.nvim",
